@@ -30,3 +30,5 @@ jobs:
       run: dotnet test --collect:"XPlat Code Coverage"
     - name: Install Reporting Tool
       run: dotnet tool install -g dotnet-reportgenerator-globaltool
+    - name: Configure Reporting Tool
+      run: coverlet --output "/home/runner/work/TestCoverageExperiment/TestCoverageExperiment/XUnit.Coverlet.Collector/TestResults/coverage.cobertura.xml
