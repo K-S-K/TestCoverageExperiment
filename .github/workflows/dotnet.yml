@@ -29,8 +29,8 @@ jobs:
 #    - name: Configure Measure Tool
 #      run: coverlet --output "/home/runner/work/TestCoverageExperiment/TestCoverageExperiment/XUnit.Coverlet.Collector/TestResults/coverage.cobertura.xml"
     - name: Coverage Measure
-      run: dotnet test --no-build --collect:"XPlat Code Coverage"
-    - name: Copy Coverage to Predictable Location
-      run: cp coverage/*/coverage.cobertura.xml coverage/coverage.cobertura.xml
+      run: dotnet test --no-build --collect:"XPlat Code Coverage" --output "/home/runner/work/TestCoverageExperiment/TestCoverageExperiment/XUnit.Coverlet.Collector/TestResults/"
+#    - name: Copy Coverage to Predictable Location
+#      run: cp coverage/*/coverage.cobertura.xml coverage/coverage.cobertura.xml
     - name: Install Reporting Tool
       run: dotnet tool install -g dotnet-reportgenerator-globaltool
