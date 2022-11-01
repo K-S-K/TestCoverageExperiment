@@ -27,7 +27,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Configure Measure Tool
-      run: coverlet --output "/home/runner/work/TestCoverageExperiment/TestCoverageExperiment/XUnit.Coverlet.Collector/TestResults/coverage.cobertura.xml
+      run: coverlet --output "/home/runner/work/TestCoverageExperiment/TestCoverageExperiment/XUnit.Coverlet.Collector/TestResults/coverage.cobertura.xml"
     - name: Coverage Measure
       run: dotnet test --collect:"XPlat Code Coverage"
     - name: Install Reporting Tool
