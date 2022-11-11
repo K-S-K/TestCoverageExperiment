@@ -36,7 +36,7 @@ jobs:
 
     - name: Coverage Measure
 #      run: dotnet test --no-build --collect:"XPlat Code Coverage" --logger trx --results-directory coverage
-      run: dotnet vstest /home/runner/work/TestCoverageExperiment/TestCoverageExperiment/XUnit.Coverlet.MSBuild/bin/Debug/net6.0/XUnit.Coverlet.MSBuild.dll --collect:"XPlat Code Coverage"
+      run: dotnet test --no-build /home/runner/work/TestCoverageExperiment/TestCoverageExperiment/XUnit.Coverlet.MSBuild/bin/Debug/net6.0/XUnit.Coverlet.MSBuild.dll --collect:"XPlat Code Coverage" --logger trx --results-directory coverage
       
 #    - name: Coverage Measure
 #      run: dotnet test --no-build --collect:"XPlat Code Coverage" --output:"/home/runner/work/TestCoverageExperiment/TestCoverageExperiment/XUnit.Coverlet.Collector/TestResults/coverage.cobertura.xml"
