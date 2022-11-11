@@ -20,17 +20,24 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+        
     - name: Restore dependencies
       run: dotnet restore
+      
     - name: Build
       run: dotnet build --no-restore
+      
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      
 #    - name: Configure Measure Tool
 #      run: coverlet --output "/home/runner/work/TestCoverageExperiment/TestCoverageExperiment/XUnit.Coverlet.Collector/TestResults/coverage.cobertura.xml"
+
     - name: Coverage Measure
       run: dotnet test --no-build --collect:"XPlat Code Coverage" --output:"/home/runner/work/TestCoverageExperiment/TestCoverageExperiment/XUnit.Coverlet.Collector/TestResults/"
+      
 #    - name: Copy Coverage to Predictable Location
 #      run: cp coverage/*/coverage.cobertura.xml coverage/coverage.cobertura.xml
+
     - name: Install Reporting Tool
       run: dotnet tool install -g dotnet-reportgenerator-globaltool
